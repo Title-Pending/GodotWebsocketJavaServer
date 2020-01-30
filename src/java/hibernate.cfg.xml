@@ -43,8 +43,8 @@ Contributor(s):
   <session-factory>
     <property name="hibernate.dialect">org.hibernate.dialect.OracleDialect</property>
     <property name="hibernate.connection.driver_class">oracle.jdbc.OracleDriver</property>
-    <property name="hibernate.connection.url">jdbc:oracle:thin:@119.65.160.14:1521:XE</property>
-    <property name="hibernate.connection.username">edunavi</property>
-    <property name="hibernate.connection.password">edunavi1234@$@</property>
+    <property name="hibernate.connection.url"></property>
+    <property name="hibernate.connection.username"></property>
+    <property name="hibernate.connection.password"></property>
   </session-factory>
 </hibernate-configuration>

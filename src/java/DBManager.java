@@ -58,20 +58,11 @@ public class DBManager {
         }
         System.out.println(" polling started..." + isPollingstarted);
         if(isPollingstarted) return;
-        
-//        try{
-//            Class.forName("oracle.jdbc.driver.OracleDriver");
-//                con = DriverManager.getConnection("jdbc:oracle:thin:@119.65.160.14:1521:xe", "edunavi", "edunavi1234@$@");
-//                System.out.println(" con " + con);
-//        }catch(Exception e) {
-//            e.printStackTrace();
-//        }
-        
         Runnable task1 = () -> {
             try {
 
   Class.forName("oracle.jdbc.driver.OracleDriver");
-                con = DriverManager.getConnection("jdbc:oracle:thin:@119.65.160.14:1521:xe", "edunavi", "edunavi1234@$@");
+                con = DriverManager.getConnection("", "", "");
                 PreparedStatement pstmt=con.prepareStatement("SELECT QUIZSTARTTIME from Glms_Quiz_Channel where ISCLOSED <> 'Y'");
             ResultSet rs = pstmt.executeQuery();
             while(rs.next()) {
